@@ -1,4 +1,5 @@
 ﻿using System;
+namespace SnakeAndLadder;
 
 class Program
 {
@@ -8,8 +9,23 @@ class Program
 
         PlayerRollsTheDie game = new PlayerRollsTheDie();
         PlayerRollsTheDie playerRollsTheDie = new PlayerRollsTheDie();
+        CheckOption checkOption = new CheckOption();
 
         int roll = playerRollsTheDie.RollDie();
-        game.PlaySnakeAndLadder(roll);
+        Console.WriteLine("You rolled {0}.", roll);
+
+        int option = checkOption.CheckForOption();
+
+        switch (option)
+        {
+            case 0:
+                break;
+            case 1:
+                game.PlaySnakeAndLadder(roll);
+                break;
+            case 2:
+                game.PlaySnakeAndLadder(-roll);
+                break;
+        }
     }
 }
