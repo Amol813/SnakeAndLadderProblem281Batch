@@ -5,6 +5,9 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Snake and Ladder Problem!");
+            PlayerStartPositionZero game = new PlayerStartPositionZero();
+            game.PlaySnakeAndLadder();
+
         }
     }
 }
